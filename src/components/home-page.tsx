@@ -295,7 +295,7 @@ export function HomePage() {
             </Link>
           </div>
         </div>
-        <div ref={journalRef} className="flex gap-4 overflow-x-auto pb-2">
+        <div ref={journalRef} className="no-scrollbar flex gap-4 overflow-x-auto pb-2">
           {articles.map((article) => (
             <article key={article.slug} className="w-[18rem] shrink-0 sm:w-[20rem]">
               <Link to="/blog/$slug" params={{ slug: article.slug }} className="block overflow-hidden rounded-[1.6rem]">
@@ -371,7 +371,7 @@ function ProductRow({
           </Link>
         </div>
       </div>
-      <div ref={rowRef} className="flex gap-4 overflow-x-auto pb-2">
+      <div ref={rowRef} className="no-scrollbar flex gap-4 overflow-x-auto pb-2">
         {children}
       </div>
     </section>

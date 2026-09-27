@@ -32,7 +32,7 @@ function ShopPage() {
           {search.q ? `Results for “${search.q}”.` : "Everything currently on the rail."}{" "}
           {list.length} {list.length === 1 ? "piece" : "pieces"}.
         </p>
-        <div className="mt-6 flex gap-2 overflow-x-auto pb-2" role="tablist" aria-label="Categories">
+        <div className="no-scrollbar mt-6 flex gap-2 overflow-x-auto pb-2" role="tablist" aria-label="Categories">
           {categoryNames.map((category) => {
             const active = search.category === category;
             return (

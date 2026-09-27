@@ -41,7 +41,7 @@ function Shell({
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0 z-50 bg-ink/35" />
         <Dialog.Content
-          className={`fixed z-50 bg-white shadow-soft outline-none ${
+          className={`no-scrollbar fixed z-50 bg-white shadow-soft outline-none ${
             wide
               ? "inset-y-0 right-0 w-full max-w-md overflow-y-auto p-6"
               : "top-1/2 left-1/2 max-h-[85vh] w-[min(100%-1.5rem,36rem)] -translate-x-1/2 -translate-y-1/2 overflow-y-auto rounded-sheet p-6"

@@ -62,6 +62,18 @@
   img {
     display: block;
   }
+
+  /* Keep scroll working but hide the visible track on carousels and drawers. */
+  .no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+  }
 }
 
 @layer components {
@@ -480,6 +492,14 @@
     overflow-x: auto;
     padding-bottom: 0.4rem;
     scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .cat-scroller::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
   }
 
   .cat-scroller > * {
