@@ -1,6 +1,5 @@
-import type { ReactNode } from "react";
 import { Link, useNavigate } from "@tanstack/react-router";
-import { ArrowUpRight, Instagram, Mail, MapPin, Phone } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { useState, type FormEvent } from "react";
 import { defaultShopSearch } from "@/lib/data";
 
@@ -24,41 +23,12 @@ export function Footer() {
 
   return (
     <footer className="px-4 pt-16 pb-10 md:px-8">
-      <div className="flex flex-col items-center justify-between gap-4 rounded-[2rem] bg-blush px-5 py-4 md:flex-row md:rounded-full md:px-8">
-        <Link to="/" className="text-lg font-bold tracking-tight">
-          Fermoso
-        </Link>
-        <nav className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm" aria-label="Footer">
-          <Link to="/">Home</Link>
-          <Link to="/shop" search={defaultShopSearch}>
-            Shop
-          </Link>
-          <Link to="/" hash="categories">
-            Categories
-          </Link>
-          <Link to="/designers">Designers</Link>
-          <Link to="/blog">Blog</Link>
-          <Link to="/about">About</Link>
-        </nav>
-        <div className="flex items-center gap-2">
-          <Social label="Instagram">
-            <Instagram className="h-4 w-4" />
-          </Social>
-          <Social label="Mail the studio">
-            <Mail className="h-4 w-4" />
-          </Social>
-          <Social label="Visit">
-            <MapPin className="h-4 w-4" />
-          </Social>
-          <Social label="Call">
-            <Phone className="h-4 w-4" />
-          </Social>
-        </div>
-      </div>
-
-      <div className="mt-10 grid gap-10 md:grid-cols-4">
+      <div className="grid gap-10 md:grid-cols-4">
         <div>
-          <h2 className="text-lg font-bold tracking-tight">Don't let the good pieces pass you by.</h2>
+          <Link to="/" className="text-2xl font-bold tracking-tight">
+            Fermoso
+          </Link>
+          <h2 className="mt-4 text-lg font-bold tracking-tight">Don't let the good pieces pass you by.</h2>
           <p className="mt-2 text-sm leading-relaxed text-muted">
             A short note when a coat lands, a denim run sells through, or the fitting calendar opens.
           </p>
@@ -135,14 +105,6 @@ export function Footer() {
       </div>
       <p className="mt-10 text-center text-xs text-muted">© 2026 Fermoso Maison. All rights reserved.</p>
     </footer>
-  );
-}
-
-function Social({ label, children }: { label: string; children: ReactNode }) {
-  return (
-    <Link to="/about" hash="visit" aria-label={label} className="grid h-9 w-9 place-items-center rounded-full bg-white">
-      {children}
-    </Link>
   );
 }
 
